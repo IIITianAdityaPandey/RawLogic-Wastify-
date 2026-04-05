@@ -1,0 +1,42 @@
+.glow-button,
+.outline-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.glow-button {
+    background-color: var(--green-primary);
+    color: #050E0A;
+    /* Fixed dark color for contrast on neon green */
+    border: none;
+    box-shadow: 0 0 0px rgba(0, 230, 118, 0);
+}
+
+.glow-button:hover {
+    background-color: var(--green-glow);
+    color: #050E0A !important;
+    /* Ensure text stays dark on hover even if it's a link */
+    box-shadow: 0 0 20px rgba(0, 230, 118, 0.6);
+    transform: translateY(-2px);
+}
+
+.outline-button {
+    background-color: transparent;
+    color: var(--green-primary);
+    border: 1px solid var(--green-primary);
+}
+
+.outline-button:hover {
+    background-color: rgba(0, 230, 118, 0.1);
+    box-shadow: 0 0 15px rgba(0, 230, 118, 0.3);
+    transform: translateY(-2px);
+}

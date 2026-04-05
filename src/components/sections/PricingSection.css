@@ -1,0 +1,93 @@
+.pricing-section {
+    padding: 120px 0;
+}
+
+.billing-toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 64px;
+}
+
+.toggle-label {
+    font-size: 16px;
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.toggle-label.active {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.toggle-switch {
+    width: 60px;
+    height: 32px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.toggle-switch:hover {
+    border-color: var(--green-primary);
+}
+
+.switch-knob {
+    width: 24px;
+    height: 24px;
+    background-color: var(--green-primary);
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 0 10px rgba(0, 230, 118, 0.5);
+}
+
+.switch-knob.toggled {
+    transform: translateX(26px);
+}
+
+.discount-badge {
+    position: absolute;
+    top: -24px;
+    right: -32px;
+    background-color: rgba(0, 230, 118, 0.1);
+    color: var(--green-primary);
+    border: 1px solid var(--green-primary);
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 12px;
+    white-space: nowrap;
+    font-weight: 700;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    align-items: center;
+}
+
+@media (max-width: 1024px) {
+    .pricing-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-card {
+        margin-bottom: 16px;
+    }
+}

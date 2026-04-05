@@ -1,0 +1,92 @@
+.features-section {
+    padding: 120px 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 80px;
+}
+
+.comparison-container {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.comparison-container h3 {
+    padding: 32px;
+    margin: 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    font-size: 28px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 24px 32px;
+    border-bottom: 1px solid var(--border);
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-table th {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    color: var(--text-muted);
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.comparison-table td {
+    font-size: 16px;
+    color: var(--text-secondary);
+}
+
+.comparison-table td:first-child {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.highlight-col {
+    background-color: rgba(0, 230, 118, 0.05);
+    /* very slightly green */
+    color: var(--green-primary) !important;
+    font-weight: 600;
+}
+
+th.highlight-col {
+    color: var(--green-glow) !important;
+}
+
+@media (max-width: 1024px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 16px;
+    }
+}
